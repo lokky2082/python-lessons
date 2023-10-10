@@ -1,8 +1,8 @@
 from abc import ABC
-from homework_02.exceptions import LowFuelError, NotEnoughFuel
+from exceptions import LowFuelError, NotEnoughFuel
 
 class Vehicle(ABC):
-    def __init__(self, started=False, weight=100, fuel=200, fuel_consumption=5):
+    def __init__(self, weight=100, started=False, fuel=200, fuel_consumption=5):
         self.weight = weight
         self.fuel = fuel
         self.fuel_consumption = fuel_consumption
@@ -20,9 +20,11 @@ class Vehicle(ABC):
         else:
             self.fuel = self.fuel - fuel_waisted
 
-        
-        
-        
+weight = 3254
+fuel = 200
+fuel_consumption = 3
+vehile =  Vehicle(weight, fuel, fuel_consumption)       
+print(vehile.weight)       
         
         
         
